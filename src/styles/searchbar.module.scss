@@ -1,0 +1,20 @@
+
+.searchbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.input,
+.select {
+    min-width: 250px;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--md-sys-color-outline);
+    font-size: 14px;
+}
+
+.input {
+    flex: 1;
+}

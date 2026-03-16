@@ -4,13 +4,14 @@ import { getProducts } from "@/api/productApi";
 import { ProductType } from "@/types/productType";
 import { useRouter } from "next/navigation";
 import useProductStore from "@store/productStore"
+import SearchBar from "@components/SearchBar";
 import ProductItem from "@components/ProductItem";
 import ProductSkeleton from "@components/ProductSkeleton";
 import styles from "@styles/products.module.scss"
 
 
 const ProductListPage = () => {
-    const { products, setProducts } = useProductStore();
+    const { products, setProducts, filteredProducts } = useProductStore();
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
@@ -25,12 +26,18 @@ const ProductListPage = () => {
         loadProducts()
     }, [setProducts]);
 
+
+
     return (
         <div className={styles.page}>
             <div className={styles.productContainer}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Products</h2>
                     <button className={styles.button} onClick={() => router.push("/products/new")} >Add New Product</button>
+                </div>
+
+                <div>
+                    <SearchBar />
                 </div>
 
                 <div className={styles.container}>
@@ -41,7 +48,7 @@ const ProductListPage = () => {
                     </>
                     }
 
-                    {products && products.length && products.map((product: ProductType) => (
+                    {filteredProducts && filteredProducts.length && filteredProducts.map((product: ProductType) => (
                         <ProductItem key={product.id} product={product} />
                     ))}
                 </div>

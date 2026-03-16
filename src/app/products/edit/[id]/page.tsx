@@ -16,9 +16,9 @@ export default function EditProductPage() {
 
     useEffect(() => {
         const loadProduct = async () => {
-                setTitle(product.title);
-                setDescription(product.description);
-                setPrice(String(product.price));
+            setTitle(product.title);
+            setDescription(product.description);
+            setPrice(String(product.price));
         };
         loadProduct();
     }, [id]);
