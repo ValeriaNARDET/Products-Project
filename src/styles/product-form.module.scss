@@ -1,0 +1,70 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--md-sys-color-background);
+}
+
+.card {
+  width: 420px;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  background: var(--md-sys-color-surface);
+  box-shadow: var(--elevation-2);
+}
+
+.title {
+  margin-bottom: var(--spacing-lg);
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.label {
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid #ccc;
+  font-size: var(--font-size-sm);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--md-sys-color-primary);
+}
+
+
+.button {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--md-sys-color-on-primary);
+  background: var(--md-sys-color-primary);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--elevation-1);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--elevation-1);
+}

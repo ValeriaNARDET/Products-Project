@@ -18,8 +18,15 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"],
+      "@api/*": ["./api/*"],
+      "@app/*": ["./app/*"],
+      "@components/*": ["./components/*"],
+      "@store/*": ["./store/*"],
+      "@styles/*": ["./styles/*"],
+      "@types/*": ["./types/*"],
     }
   },
   "include": [
@@ -29,6 +36,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/types", "src/app/products/edit/[id]"  ],
   "exclude": ["node_modules"]
 }
